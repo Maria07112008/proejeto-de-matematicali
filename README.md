@@ -33,7 +33,7 @@ Além disso, os resultados são registrados em uma tabela e representados grafic
 
 ---
 
-3. METODOLOGIA
+## 3. METODOLOGIA
 
 O desenvolvimento do projeto foi dividido em algumas etapas.
 
@@ -107,7 +107,7 @@ Dessa maneira, o usuário consegue perceber com maior facilidade o comportamento
 
 ---
 
-## 3 FUNCIONAMENTO DO PROGRAMA
+## 4.FUNCIONAMENTO DO PROGRAMA
 
 Para executar a simulação, o usuário informa os parâmetros desejados.
 
