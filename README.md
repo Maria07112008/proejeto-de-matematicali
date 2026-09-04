@@ -107,7 +107,7 @@ Dessa maneira, o usuário consegue perceber com maior facilidade o comportamento
 
 ---
 
-4. FUNCIONAMENTO DO PROGRAMA
+## 3 FUNCIONAMENTO DO PROGRAMA
 
 Para executar a simulação, o usuário informa os parâmetros desejados.
 
