@@ -3,34 +3,126 @@
 
 ## 1. Texto de Introdução do Trabalho
 
-A era digital moderna é sustentada por uma base invisível, porém robusta: a união entre a **matemática** e a **programação**. Conceitos abstratos como cálculo, estatística, progressões e equações diferenciais deixaram de ser apenas teorias acadêmicas para se tornarem o motor de inovações como inteligência artificial, criptografia e modelagem de sistemas dinâmicos.
+A matemática e a programação estão cada vez mais presentes no desenvolvimento das tecnologias utilizadas na sociedade. Sistemas de inteligência artificial, análise de dados, segurança digital, aplicativos, jogos e diversas outras tecnologias utilizam conceitos matemáticos para funcionar.
 
-Este projeto tem como **objetivo principal** demonstrar a aplicação prática de conceitos de Matemática II por meio de um algoritmo desenvolvido em **JavaScript**, resolvendo um problema de simulação de sistemas complexos. Para ilustrar esse impacto, escolhemos modelar uma **Simulação de Reação em Cadeia** (inspirada em modelos de crescimento exponencial e decaimento dinâmico, como o modelo estocástico de propagação).
+A matemática permite representar problemas e fenômenos por meio de fórmulas, funções, probabilidades e modelos. A programação, por sua vez, transforma esses modelos em algoritmos que podem ser executados por computadores.
 
-Através da interface web desenvolvida, mostramos como a automação de fórmulas matemáticas permite prever comportamentos em larga escala, provando que a computação é a ferramenta essencial que traduz equações abstratas em soluções tecnológicas interativas.
+Neste trabalho foi desenvolvido um projeto utilizando HTML, CSS e JavaScript, com o objetivo de demonstrar na prática como um conceito matemático pode ser transformado em uma simulação computacional.
+
+O projeto consiste em uma simulação de crescimento em cadeia, na qual elementos podem gerar novos elementos de acordo com uma determinada taxa de crescimento e uma probabilidade de ativação. Os resultados são apresentados de forma visual por meio de contadores, tabela e gráfico.
 
 ## 2. Explicação da Atividade: Como o Site Foi Feito
 
-Para transformar a proposta teórica em um projeto funcional, interativo e visualmente moderno, a atividade foi estruturada utilizando os padrões fundamentais da web (**HTML5** e **CSS3**), integrados com a lógica de programação em **JavaScript**.
 
-Abaixo está a explicação de como o site foi construído e como cada parte funciona:
+O projeto desenvolvido consiste em uma página web que permite ao usuário configurar e executar uma simulação matemática.
 
-### A. Estrutura de Arquivos do Projeto
+A interface possui campos para definir:
 
-O projeto foi dividido em dois arquivos principais para manter o código limpo, organizado e profissional (seguindo as boas práticas de desenvolvimento web):
+- quantidade inicial de elementos;
+- taxa de crescimento;
+- probabilidade de ativação;
+- número de etapas da simulação.
 
-1. **`index.html`**: É o esqueleto da página. Ele organiza o conteúdo textual do trabalho em seções semânticas (`<header>`, `<main>`, `<section>`, `<footer>`) e abriga a estrutura do **Laboratório de Simulação Interativa** (campos de entrada de dados e botões).
-2. **`style.css`**: É a folha de estilos responsável pelo design visual. Utilizando variáveis globais (`:root`), um sistema moderno de cores em tons de azul escuro/ardósia, sombras suaves e o conceito de *Flexbox/Grid*, o CSS garante que a página seja totalmente responsiva, adaptando-se perfeitamente a telas de computadores, tablets e celulares.
+Também foram adicionados botões para controlar a execução:
 
-### B. A Lógica Matemática no Código JavaScript
+Iniciar, Pausar, Continuar e Reiniciar.
 
-O coração interativo da página reside no script em JavaScript inserido no final do arquivo HTML. Ele executa os seguintes passos:
+Durante a simulação, o sistema mostra a etapa atual e a quantidade de elementos ativos.
 
-* **Entrada de Dados do Usuário:** O script captura os valores definidos pelo usuário nos campos da tela (núcleos iniciais, média da taxa de reação e número total de gerações).
-* **Processamento Estocástico (Equação Discreta):** Através de um laço de repetição (`for`), a aplicação simula o crescimento exponencial geração por geração. Cada novo estado é calculado multiplicando o ativo atual pela taxa e aplicando um fator de aleatoriedade (`Math.random()`) para simular as incertezas do mundo real:
+Além disso, os resultados são registrados em uma tabela e representados graficamente.
 
-$$\text{Ativos}_{\text{novo}} = \text{Ativos}_{\text{atual}} \times \text{Taxa} \times \text{Fator Aleatório}$$
+---
+
+3. METODOLOGIA
+
+O desenvolvimento do projeto foi dividido em algumas etapas.
+
+3.1 Criação da estrutura HTML
+
+Primeiramente foi criada a estrutura da página utilizando HTML.
+
+Foram adicionados os títulos, campos de entrada, botões, área de resultados, tabela e elemento destinado ao gráfico.
+
+3.2 Desenvolvimento da aparência
+
+Em seguida foi utilizado CSS para melhorar a aparência da página.
+
+Foram definidos:
+
+- cores;
+- tamanho das letras;
+- espaçamento;
+- botões;
+- caixas de informações;
+- fundo da página;
+- organização dos elementos.
+
+O objetivo foi criar uma interface simples, organizada e adequada para uma apresentação escolar.
+
+3.3 Desenvolvimento do algoritmo
+
+A parte principal da aplicação foi desenvolvida utilizando JavaScript.
+
+O programa recebe os valores definidos pelo usuário e inicia a simulação.
+
+A cada etapa, o algoritmo analisa os elementos existentes e utiliza uma função aleatória para verificar quais serão ativados.
+
+Um dos principais comandos utilizados foi:
+
+Math.random()
+
+Essa função gera um número aleatório entre 0 e 1, permitindo representar a probabilidade no modelo.
+
+3.4 Estruturas de repetição
+
+O programa utiliza uma estrutura "for" para analisar os elementos existentes.
+
+De forma simplificada:
+
+for (let i = 0; i < quantidade; i++) {
+    // cálculo da simulação
+}
+
+Essa estrutura permite repetir uma determinada operação várias vezes automaticamente.
+
+3.5 Atualização da simulação
+
+Foi utilizada a função:
+
+setInterval()
+
+para fazer com que uma nova etapa fosse executada automaticamente depois de determinado intervalo de tempo.
+
+Isso cria o efeito de animação e permite acompanhar a evolução da simulação.
+
+3.6 Construção do gráfico
+
+Os resultados são armazenados pelo programa e utilizados para desenhar um gráfico.
+
+O gráfico permite observar visualmente a relação entre:
+
+Etapas → Quantidade de elementos
+
+Dessa maneira, o usuário consegue perceber com maior facilidade o comportamento do modelo.
+
+---
+
+4. FUNCIONAMENTO DO PROGRAMA
+
+Para executar a simulação, o usuário informa os parâmetros desejados.
+
+Um exemplo de configuração é:
+
+Parâmetro| Valor
+Quantidade inicial| 1
+Taxa de crescimento| 2
+Probabilidade| 70%
+Número de etapas| 10
+
+Após clicar em Iniciar, o programa começa a executar as etapas.
+
+A cada etapa, cada elemento possui uma determinada chance de ser ativado. Quando ocorre a ativação, novos elementos são adicionados de acordo com a taxa de crescimento.
+
+Como existe um componente aleatório, duas simulações utilizando os mesmos parâmetros podem apresentar resultados diferentes.
 
 
-* **Condicionais de Alerta:** O código monitora se a reação atinge um limite crítico de crescimento, disparando avisos visuais de alerta ou conclusão estável.
-* **Manipulação do DOM:** O resultado numérico gerado pelo loop é convertido dinamicamente em elementos de lista (`<li>`) e injetado na tela em tempo real, permitindo que o avaliador teste diferentes cenários matemáticos com apenas um clique.
